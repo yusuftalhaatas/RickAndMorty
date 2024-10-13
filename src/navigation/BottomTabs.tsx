@@ -5,9 +5,8 @@ import EpisodesScreen from "../screens/EpisodesScreen";
 import Icon from "react-native-vector-icons/Ionicons";
 import LocationScreen from "../screens/LocationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-import { styled } from "nativewind"; // NativeWind importu
 
-// Bottom Tab navigator oluşturuyoruz
+// Creating Bottom Tab navigator
 const Tab = createBottomTabNavigator();
 
 export default function BottomTabs() {
@@ -17,7 +16,7 @@ export default function BottomTabs() {
         tabBarIcon: ({ color, size }) => {
           let iconName = "";
 
-          // Route adına göre hangi ikonun gösterileceğini ayarlıyoruz
+          // Setting which icon to show based on the route name
           if (route.name === "Characters") {
             iconName = "people";
           } else if (route.name === "Episodes") {
@@ -28,53 +27,53 @@ export default function BottomTabs() {
             iconName = "person";
           }
 
-          // Ionicons'dan simgeleri kullanıyoruz
+          // Using icons from Ionicons
           return <Icon name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#facc15", // Seçili (aktif) olan tab'ın rengi
-        tabBarInactiveTintColor: "#3CB371", // Seçilmemiş tab'ların rengi
+        tabBarActiveTintColor: "#facc15", // Color of the active tab
+        tabBarInactiveTintColor: "#3CB371", // Color of the inactive tabs
         tabBarStyle: {
-          backgroundColor: "#1f2937", // Tab bar arka planı (Rick and Morty evrenine uygun koyu bir tema)
-          borderTopWidth: 0, // Üst sınırı kaldırıyoruz
-          height: 70, // Tab bar yüksekliği
-          paddingBottom: 20, // İçerideki ikonları ortalamak için padding
+          backgroundColor: "#1f2937", // Background color of the tab bar (dark theme suitable for Rick and Morty universe)
+          borderTopWidth: 0, // Removing the top border
+          height: 70, // Height of the tab bar
+          paddingBottom: 20, // Padding to center the icons
         },
         tabBarLabelStyle: {
-          fontSize: 12, // Tab etiketlerinin boyutu
-          fontFamily: "GetSchwifty-Regular", // Rick and Morty fontu
+          fontSize: 12, // Size of the tab labels
+          fontFamily: "GetSchwifty-Regular", // Rick and Morty font
         },
         tabBarIconStyle: {
-          marginTop: 8, // İkonları yukarı çekiyoruz
+          marginTop: 8, // Pulling the icons up
         },
-        headerShown: false, // Her tab için header'ı gizliyoruz
+        headerShown: false, // Hiding the header for each tab
       })}
     >
       <Tab.Screen
         name="Characters"
         component={CharactersScreen}
         options={{
-          tabBarLabel: "Characters", // Tab etiketi
+          tabBarLabel: "Characters", // Tab label
         }}
       />
       <Tab.Screen
         name="Episodes"
         component={EpisodesScreen}
         options={{
-          tabBarLabel: "Episodes", // Tab etiketi
+          tabBarLabel: "Episodes", // Tab label
         }}
       />
       <Tab.Screen
         name="Locations"
         component={LocationScreen}
         options={{
-          tabBarLabel: "Locations", // Tab etiketi
+          tabBarLabel: "Locations", // Tab label
         }}
       />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarLabel: "Profile", // Tab etiketi
+          tabBarLabel: "Profile", // Tab label
         }}
       />
     </Tab.Navigator>
