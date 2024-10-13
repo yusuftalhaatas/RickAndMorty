@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "RickAndMorty",
+    "slug": "RickAndMorty",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/welcome-bg.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yusuftalha.RickAndMorty"
+    },
+    "web": {
+      "favicon": "./src/assets/icon.png"
+    },
+    "fonts": {
+      "GetSchwifty-Regular": "./src/assets/fonts/GetSchwifty-Regular.ttf"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3586ff95-ec5b-412c-8ee8-8786dd4c3054"
+      }
+    }
+  }
+}
