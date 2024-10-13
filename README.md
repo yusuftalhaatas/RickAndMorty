@@ -62,8 +62,8 @@ The architecture of the code you write should be clean and readable.
 │   │   └── ImageSelector.tsx         # Modal for selecting profile image
 │   │
 │   ├── navigation
-│   │   ├── AppNavigator.tsx          # Main navigation logic using Expo Router
-│   │   └── routes.tsx                # Defines routes and screen navigation
+│   │   ├── AppNavigator.tsx          # Main navigation
+│   │   └── BottomTabs.tsx            #Bottom tabs    
 │   │
 │   ├── screens
 │   │   ├── CharactersScreen.tsx      # Screen for displaying characters
