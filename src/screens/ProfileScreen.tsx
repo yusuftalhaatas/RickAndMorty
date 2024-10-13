@@ -21,6 +21,7 @@ import { useNavigation, NavigationProp } from "@react-navigation/native"; // Nav
 import { RootStackParamList } from "../types/navigation"; // Navigation types
 import Icon from "react-native-vector-icons/Ionicons";
 import ImageSelector from "../modals/ImageSelector"; // Modal import
+import { useCustomFonts } from "../hooks/useCustomFonts"; // useCustomFonts hook for loading fonts
 
 const StyledSafeAreaView = styled(SafeAreaView);
 const StyledView = styled(View);
@@ -39,6 +40,8 @@ const ProfileScreen: React.FC = () => {
   const { favoriteCharacters } = useFavoriteCharactersStore();
   const { favoriteEpisodes } = useFavoriteEpisodesStore();
   const { favoriteLocations } = useFavoriteLocationsStore();
+
+  const fontsLoaded = useCustomFonts(); // Load fonts
 
   useEffect(() => {
     loadProfile();
@@ -90,12 +93,18 @@ const ProfileScreen: React.FC = () => {
           </StyledView>
         ) : (
           <TouchableOpacity onPress={() => setEditingUsername(true)}>
-            <StyledText
-              className="text-4xl font-bold text-green-400 mt-2"
-              style={{ fontFamily: "GetSchwifty-Regular" }}
-            >
-              {username || "Enter your username"}
-            </StyledText>
+            {fontsLoaded ? (
+              <StyledText
+                className="text-4xl font-bold text-green-400 mt-2"
+                style={{ fontFamily: "GetSchwifty-Regular" }} // Using custom font
+              >
+                {username || "Enter your username"}
+              </StyledText>
+            ) : (
+              <StyledText className="text-4xl font-bold text-green-400 mt-2">
+                {username || "Enter your username"}
+              </StyledText>
+            )}
           </TouchableOpacity>
         )}
       </StyledView>

@@ -8,6 +8,7 @@ import { styled } from "nativewind";
 import { LocationType } from "../types/location";
 import NotFound from "../components/NotFound";
 import CustomActivityIndicator from "../components/CustomActivityIndicator";
+import Error from "../components/Error";
 
 // Components styled with Tailwind
 const StyledTextInput = styled(TextInput);
@@ -70,17 +71,15 @@ export default function LocationsScreen() {
 
       {/* Loading Indicator */}
       {isLoadingLocations && (
-        <StyledView className="items-center my-4">
+        <StyledView className="flex-1 justify-center items-center bg-gray-900">
           <CustomActivityIndicator />
-          <StyledText className="text-white">Loading locations...</StyledText>
+          <StyledText className="text-white mt-2">Loading...</StyledText>
         </StyledView>
       )}
 
       {/* Error State */}
       {(allLocationsError || searchError) && (
-        <StyledText className="text-center mt-5 text-red-500">
-          Error fetching locations. Please try again.
-        </StyledText>
+        <Error message="Failed to load locations" />
       )}
 
       {/* Location Listing */}
