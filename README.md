@@ -1,42 +1,36 @@
 # RickAndMorty
-## -Requirements
-### 1. Expo and Expo Router with TypeScript
-- The project is built using **Expo** and **TypeScript** to provide enhanced developer experience, type safety
 
-### 2. Multi-select Implementation According to the Design
-- A **multi-select** feature has been implemented, allowing users to select and manage multiple characters, episodes, or locations as per the design requirements.
+This project is a Rick and Morty character, episode, and location explorer built with **Expo**, **TypeScript**, and **React Native**. It uses the [Rick and Morty API](https://rickandmortyapi.com) to fetch and display data about characters, episodes, and locations from the show. Users can explore, search, and favorite their preferred characters, episodes, and locations, with detailed views for each entity.
 
-### 3. Dynamic Query and API Integration
-- The query entered in the input field is dynamically **queried via the API**. Results are displayed in a popup with different states depending on whether the query is active or not.
+## Features
 
-### 4. Character Display with Image, Name, and Episodes Count
-- Each character result displays:
-  - Character image
-  - Name
-  - The number of episodes they appeared in
-- This is achieved using a custom `CharacterCard` component.
+- **Character Search**: Search for Rick and Morty characters by name and view details like their status, species, gender, and episodes they've appeared in.
+- **Episodes**: View a list of all episodes, with character details for each episode.
+- **Locations**: Explore different locations from the show and the residents that live there.
+- **Favorites**: Users can add and remove favorites for characters, episodes, and locations.
+- **Highlighting Search Queries**: Searched terms are highlighted in green within the results.
+- **Multi-Select**: Select multiple characters, episodes, or locations for better exploration.
+- **Loading and Error Handling**: Custom loading indicators and error states ensure a smooth user experience.
 
-### 5. Query Highlighting in Results
-- The search query entered by the user is **highlighted in green** within the result names. For example, searching for "Ric" will highlight "Ric" in the character names, making it easier to locate matches.
+## Technologies Used
 
-### 6. Adding and Removing Favorites
-- Users can **add or remove** characters, episodes, and locations from their favorites list. This functionality includes:
-  - Visual indicators to show the favorited state.
-  - Smooth toggling between favorited and non-favorited states.
+- **Expo and Expo Router**: Easy mobile development and routing.
+- **TypeScript**: Type safety and clean code structure.
+- **NativeWind**: Tailwind-like styling for React Native.
+- **TanStack Query v5**: Efficient API data fetching and caching.
+- **Zustand**: Lightweight state management for handling profile and favorites data.
 
-### 7. Custom Loading Indicator
-- A **custom loading indicator** was implemented, following the Rick and Morty theme, to enhance the user experience during API data fetching.
+## How to Install
 
-### 8. Exception Handling and Error States
-- If there’s an issue fetching data from the API, a **themed error screen** is displayed, informing the user about the error in a visually consistent manner.
+To run this project locally, follow these steps:
 
-### 9. APK Build Output
-- The project has been built as an APK and can be found in the project files under `universal.apk`. This APK is ready for installation and testing on Android devices.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yusuftalhaatas/RickAndMorty.git
+   cd RickAndMorty
+   npm install
+   npx expo start
 
----
-## Most importantly:
-
-The architecture of the code you write should be clean and readable.
 ## Project Structure
 
 ```bash
@@ -63,7 +57,7 @@ The architecture of the code you write should be clean and readable.
 │   │
 │   ├── navigation
 │   │   ├── AppNavigator.tsx          # Main navigation
-│   │   └── BottomTabs.tsx            #Bottom tabs    
+│   │   └── BottomTabs.tsx            # Bottom tabs    
 │   │
 │   ├── screens
 │   │   ├── CharactersScreen.tsx      # Screen for displaying characters
@@ -84,15 +78,16 @@ The architecture of the code you write should be clean and readable.
 │   │   ├── episode.ts                # Type definitions for episode data
 │   │   ├── location.ts               # Type definitions for location data
 │   │   └── navigation.ts             # Type definitions for navigation props
-│   │
-│   ├── App.tsx                       # Root component where everything is combined
-│   └── index.ts                      # Entry point for the application
+│   
+│   
+│                        
 │
 ├── assets                            # Assets like images, fonts, etc.
 │   ├── images
 │   ├── fonts
 │   └── splash
 │
+├── App.tsx                           # Root component where everything is combined
 ├── node_modules                      # Node.js modules installed via npm
 │
 ├── package.json                      # Project metadata and dependencies
@@ -102,6 +97,8 @@ The architecture of the code you write should be clean and readable.
 ```
 
 ## Technologies:
+- **React Native**
+- **Typescript**
 - **NativeWind**
 - **TanStack Query v5**
 - **Zustand**
