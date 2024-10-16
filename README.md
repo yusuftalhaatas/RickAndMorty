@@ -14,7 +14,7 @@ This project is a Rick and Morty character, episode, and location explorer built
 
 ## Technologies Used
 
-- **Expo and Expo Router**: Easy mobile development and routing.
+- **Expo**: Easy mobile development.
 - **TypeScript**: Type safety and clean code structure.
 - **NativeWind**: Tailwind-like styling for React Native.
 - **TanStack Query v5**: Efficient API data fetching and caching.
@@ -95,13 +95,6 @@ To run this project locally, follow these steps:
 ├── tailwind.config.js                # Tailwind configuration for NativeWind
 └── app.json                          # Expo project configuration
 ```
-
-## Technologies:
-- **React Native**
-- **Typescript**
-- **NativeWind**
-- **TanStack Query v5**
-- **Zustand**
 
 ## App Screenshots
 
